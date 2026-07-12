@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: radial-gradient(
+      1200px 600px at 50% -10%,
+      rgba(124, 92, 255, 0.18),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 90% 10%,
+      rgba(255, 77, 125, 0.14),
+      transparent 55%
+    ),
+    #0b0b13;
+  color: #f5f5fa;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+}
+
+/* iOS のズーム防止（フォントサイズ16px以上） + タップハイライト調整 */
+input,
+textarea,
+button {
+  font-size: 16px;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* スクロールバー（チャット等） */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
